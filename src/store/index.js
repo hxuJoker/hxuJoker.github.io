@@ -1,15 +1,28 @@
-import Vue from 'vue'
-import Vuex from 'vuex'
+import Vue from 'vue';
 
-Vue.use(Vuex)
+let user = localStorage.getItem('document_user');
+user = user ? JSON.parse(user) : {
+  id: '',
+  name: '',
+};
+if (!user.id) {
+  user.id = Date.now();
+  user.name = '临时用户';
+}
 
-export default new Vuex.Store({
-  state: {
+const store = {
+
+  title: 'joker-blog',
+
+  route: {
+    stopJump: false,
+    to: null,
   },
-  mutations: {
-  },
-  actions: {
-  },
-  modules: {
-  }
-})
+
+  user,
+
+};
+
+Vue.observable(store);
+
+export default store;

@@ -1,0 +1,26 @@
+/* COLOR */
+/* TEXT COLOR */
+/* BORDER COLOR */
+/* OTHER COLOR */
+/* SIZE PADDING MARGIN */
+/* IMAGE SIZE */
+/* FONT SIZE */
+/* Z-INDEX */
+/* HEIGHT WIDTH SIZE */
+.ea-loading-bar {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 2000;
+}
+.ea-loading-bar-inner {
+  transition: width 0.2s linear;
+}
+.ea-loading-bar-inner-color-primary {
+  background-color: #409EFF;
+}
+.ea-loading-bar-inner-failed-color-error {
+  background-color: #FA5555;
+}

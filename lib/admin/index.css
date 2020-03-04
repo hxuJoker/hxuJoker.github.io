@@ -1,0 +1,57 @@
+/* COLOR */
+/* TEXT COLOR */
+/* BORDER COLOR */
+/* OTHER COLOR */
+/* SIZE PADDING MARGIN */
+/* IMAGE SIZE */
+/* FONT SIZE */
+/* Z-INDEX */
+/* HEIGHT WIDTH SIZE */
+.ea-admin {
+  height: 100%;
+  width: 100%;
+  background-color: #FFF;
+  position: relative;
+}
+.ea-admin ._header {
+  width: 100%;
+  transition: all 0.2s;
+  -webkit-transition: all 0.2s;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+.ea-admin ._header .__header {
+  width: 100%;
+  overflow: hidden;
+}
+.ea-admin ._header .__tabs {
+  width: 100%;
+}
+.ea-admin ._side {
+  width: 200px;
+  height: 100%;
+  background-color: #FFF;
+  top: 0;
+  z-index: 1001;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+}
+.ea-admin ._side.ea--dark {
+  background-color: #263238;
+}
+.ea-admin ._side .el-menu {
+  border-right: 0;
+}
+.ea-admin ._body {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: auto;
+  clear: both;
+  box-sizing: border-box;
+  transition: all 0.2s;
+  -webkit-transition: all 0.2s;
+}

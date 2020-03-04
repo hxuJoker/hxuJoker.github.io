@@ -1,19 +1,22 @@
-const path = require('path')
-function resolve (dir) {
-  return path.join(__dirname, dir)
-}
 module.exports = {
+  configureWebpack: config => {
+    config.module.rules.push({
+        test: /\.md$/,
+        use: [
+          {
+            loader: 'vue-loader',
+          },
+          {
+            loader: require.resolve('./src/utils/markdown-loader'),
+          },
+        ],
+      },
+    );
+  },
+  devServer: {
+    host: '0.0.0.0',
+    disableHostCheck: true,
+  },
+  outputDir: 'docs',
   publicPath: './',
-  outputDir: 'dist',
-  // assetsDir:'dist',
-  indexPath: 'index.html',
-  filenameHashing: true,
-  configureWebpack: {
-    name: 'joker-blog',
-    resolve: {
-      alias: {
-        '@': resolve('src')
-      }
-    }
-  }
-}
+};

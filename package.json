@@ -1,46 +1,79 @@
 {
-  "name": "joker-blog",
-  "version": "0.1.0",
-  "private": true,
+  "name": "e-admin",
+  "version": "0.3.11",
+  "main": "lib/index.umd.min.js",
+  "style": "lib/index.css",
+  "typings": "types/index.d.ts",
   "scripts": {
     "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
-    "push": "node gitpush"
+    "build": "npm run build-lib && npm run build-components",
+    "build-lib": "vue-cli-service build --target lib --dest lib --name index packages/index.js",
+    "build-components": "npx webpack --config ./build/webpack.component.js",
+    "build-docs": "vue-cli-service build"
   },
   "dependencies": {
-    "core-js": "^3.6.4",
-    "shelljs": "^0.8.3",
-    "vue": "^2.6.11",
-    "vue-router": "^3.1.5",
-    "vuex": "^3.1.2"
+    "address-parse": "^1.0.1",
+    "core-js": "^3.1.2",
+    "e-admin": "^0.3.11",
+    "element-ui": "^2.12.0",
+    "less": "^3.10.3",
+    "less-loader": "^5.0.0",
+    "screenfull": "^5.0.0",
+    "vue": "^2.6.10",
+    "vue-router": "^3.1.3"
   },
   "devDependencies": {
-    "@vue/cli-plugin-babel": "~4.2.0",
-    "@vue/cli-plugin-eslint": "~4.2.0",
-    "@vue/cli-plugin-router": "~4.2.0",
-    "@vue/cli-plugin-vuex": "~4.2.0",
-    "@vue/cli-service": "~4.2.0",
-    "@vue/eslint-config-standard": "^5.1.0",
-    "babel-eslint": "^10.0.3",
-    "eslint": "^6.7.2",
-    "eslint-plugin-import": "^2.20.1",
-    "eslint-plugin-node": "^11.0.0",
-    "eslint-plugin-promise": "^4.2.1",
-    "eslint-plugin-standard": "^4.0.0",
-    "eslint-plugin-vue": "^6.1.2",
-    "less": "^3.0.4",
+    "@babel/plugin-transform-modules-umd": "^7.7.0",
+    "@vue/cli-plugin-babel": "^4.0.0",
+    "@vue/cli-plugin-eslint": "^4.0.0",
+    "@vue/cli-service": "^4.0.0",
+    "babel-eslint": "^10.0.1",
+    "css-loader": "^3.2.0",
+    "eslint": "^5.16.0",
+    "eslint-plugin-vue": "^5.0.0",
+    "extract-text-webpack-plugin": "^4.0.0-beta.0",
+    "hyperdown": "^2.4.2",
+    "less": "^3.10.3",
     "less-loader": "^5.0.0",
-    "lint-staged": "^9.5.0",
-    "vue-template-compiler": "^2.6.11"
+    "prismjs": "^1.17.1",
+    "progress-bar-webpack-plugin": "^1.12.1",
+    "style-loader": "^1.0.0",
+    "url-loader": "^2.2.0",
+    "vue-loader": "^15.7.2",
+    "vue-style-loader": "^4.1.2",
+    "vue-template-compiler": "^2.6.10",
+    "webpack": "^4.41.2",
+    "webpack-cli": "^3.3.10",
+    "webpack-node-externals": "^1.7.2"
   },
-  "gitHooks": {
-    "pre-commit": "lint-staged"
+  "eslintConfig": {
+    "root": true,
+    "env": {
+      "node": true
+    },
+    "extends": [
+      "plugin:vue/essential",
+      "eslint:recommended"
+    ],
+    "rules": {},
+    "parserOptions": {
+      "parser": "babel-eslint"
+    }
   },
-  "lint-staged": {
-    "*.{js,jsx,vue}": [
-      "vue-cli-service lint",
-      "git add"
-    ]
-  }
+  "postcss": {
+    "plugins": {
+      "autoprefixer": {}
+    }
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions"
+  ],
+  "homepage": "https://github.com/akebe/e-admin",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:akebe/e-admin.git"
+  },
+  "license": "MIT"
 }

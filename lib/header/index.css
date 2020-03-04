@@ -1,0 +1,32 @@
+/* COLOR */
+/* TEXT COLOR */
+/* BORDER COLOR */
+/* OTHER COLOR */
+/* SIZE PADDING MARGIN */
+/* IMAGE SIZE */
+/* FONT SIZE */
+/* Z-INDEX */
+/* HEIGHT WIDTH SIZE */
+.ea-header {
+  width: 100%;
+  height: 40px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  background-color: #FFF;
+  display: flex;
+}
+.ea-header > div:not(._center),
+.ea-header ._center > div {
+  line-height: 40px;
+  padding: 0 10px;
+}
+.ea-header > div:not(._center) .el-breadcrumb,
+.ea-header ._center > div .el-breadcrumb {
+  line-height: 40px;
+}
+.ea-header ._badge {
+  float: right;
+}
+.ea-header ._center {
+  flex: 1;
+  display: flex;
+}
