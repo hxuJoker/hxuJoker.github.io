@@ -1,6 +1,5 @@
 import Vue from 'vue';
 import VueRouter from 'vue-router';
-import RouterEach from './router-each';
 
 import Router from './router/index';
 
@@ -9,11 +8,9 @@ import {Error} from 'e-admin';
 const Index = () =>
   import ( /* webpackChunkName: "index" */ '@/views/Index.vue');
 const Intro = () =>
-  import ( /* webpackChunkName: "index" */ '@/views/intro/Intro.vue');
+  import ( /* webpackChunkName: "index" */ '@/views/home/Intro.vue');
 const Update = () =>
   import ( /* webpackChunkName: "update" */ '@/views/update/Update.vue');
-const Login = () =>
-  import ( /* webpackChunkName: "login" */ '@/views/Login.vue');
 const Header = () =>
   import ( /* webpackChunkName: "ea-header" */ '@/views/header/Header.vue');
 const View = () =>
@@ -25,18 +22,25 @@ const SingleView = () =>
 const ImageDialog = () =>
   import ( /* webpackChunkName: "ea-image-dialog" */ '@/views/image-dialog/ImageDialog.vue');
 
+
+
+const Node = () =>
+  import ( /* webpackChunkName: "ea-image-dialog" */ '@/views/daily/node/node.vue');
+const Daily = () =>
+  import ( /* webpackChunkName: "ea-image-dialog" */ '@/views/daily/daily.vue');
+// const ImageDialog = () =>
+//   import ( /* webpackChunkName: "ea-image-dialog" */ '@/views/image-dialog/ImageDialog.vue');
+// const ImageDialog = () =>
+//   import ( /* webpackChunkName: "ea-image-dialog" */ '@/views/image-dialog/ImageDialog.vue');
+// const ImageDialog = () =>
+//   import ( /* webpackChunkName: "ea-image-dialog" */ '@/views/image-dialog/ImageDialog.vue');
+// const ImageDialog = () =>
+//   import ( /* webpackChunkName: "ea-image-dialog" */ '@/views/image-dialog/ImageDialog.vue');
+
 Vue.use(VueRouter);
 
 const router = new VueRouter({
   routes: [
-    {
-      path: '/login',
-      name: 'Login',
-      component: Login,
-      meta: {
-        login: true,
-      },
-    },
     {
       path: '/',
       name: 'Index',
@@ -104,6 +108,16 @@ const router = new VueRouter({
           name: 'ImageDialog',
           component: ImageDialog,
         },
+        {
+          path: '/node',
+          name: 'Node',
+          component: Node,
+        },
+        {
+          path: '/daily',
+          name: 'Daily',
+          component: Daily,
+        },
         ...Router,
         {
           path: '*',
@@ -125,7 +139,5 @@ const router = new VueRouter({
     },
   },
  */
-
-RouterEach(router);
 
 export default router;

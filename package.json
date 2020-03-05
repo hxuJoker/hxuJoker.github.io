@@ -70,7 +70,6 @@
     "> 1%",
     "last 2 versions"
   ],
-  "homepage": "https://github.com/akebe/e-admin",
   "repository": {
     "type": "git",
     "url": "git@github.com:akebe/e-admin.git"

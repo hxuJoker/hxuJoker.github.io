@@ -1,20 +1,14 @@
 <template>
   <ea-admin>
     <template v-slot:header>
-      <ea-header
+      <!-- <ea-header
           :collapse.sync="headerCollapse"
           :fullscreen="fullscreen"
           :nav-data="headerNavData"
-          :user="user"
-          @command="handleCommand">
-      </ea-header>
+          :user="user">
+      </ea-header> -->
     </template>
     <template v-slot:side>
-      <ea-logo
-          name="joker-blog"
-          v-if="logoVisible"
-          logo-type="image"
-      />
       <ea-nav-menu
           router
           :data="navData"
@@ -38,7 +32,6 @@
         headerCollapseActive: true,
         fullscreen: true,
         headerNavDataActive: true,
-        logoVisible: true,
       };
     },
     computed: {
@@ -84,5 +77,10 @@
 <style scoped>
   .icon-github {
     font-size: 22px
+  }
+  .ea-admin {
+    background: #efefef !important;
+    min-height: 100%;
+    height: auto;
   }
 </style>

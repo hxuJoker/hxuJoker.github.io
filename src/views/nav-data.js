@@ -1,13 +1,18 @@
 export default [
   {
+    title: '首页',
+    path: '/',
+    icon: 'el-icon-s-home',
+  },
+  {
     title: '更新日志',
     path: '/update',
     icon: 'el-icon-s-promotion',
   },
   {
-    title: 'project',
+    title: '看板',
     path: '/router',
-    icon: 'iconfont icon-header',
+    icon: 'el-icon-monitor',
   },
   {
     title: '组件',
@@ -52,6 +57,32 @@ export default [
         icon: 'el-icon-picture-outline',
       },
     ],
+  },
+  {
+    title:'文档',
+    icon: 'el-icon-document',
+    children:[
+      {
+        title: 'Node 基础和实践',
+        path: '/node'
+      },
+      {
+        title: 'TypeScript 基础入门',
+        path: '/ts'
+      },
+      {
+        title: 'ES5 和 ES6 中类的区别',
+        path: '/es'
+      },
+      {
+        title: '解决移动端 Retina 屏幕 1px 边框问题',
+        path: '/retina'
+      },
+      {
+        title: 'BFC 原理解析',
+        path: '/bfc'
+      }
+    ]
   },
   {
     title: '错误页面',
