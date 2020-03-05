@@ -5,11 +5,6 @@ const store = {
 
   title: 'joker-blog',
 
-  route: {
-    stopJump: false,
-    to: null,
-  },
-
   user: {
     id: '',
     name: '',

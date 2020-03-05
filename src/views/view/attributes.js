@@ -42,13 +42,6 @@ export default [
     default: '10',
   },
   {
-    prop: 'backtop',
-    desc: '是否显示回到顶部按钮',
-    type: 'Boolean',
-    enum: '-',
-    default: 'true',
-  },
-  {
     prop: 'params-key',
     desc: '子页面主键',
     type: 'String',

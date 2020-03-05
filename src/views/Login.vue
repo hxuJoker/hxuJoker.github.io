@@ -7,7 +7,7 @@
   ></ea-login>
 </template>
 <script>
-  import logo from '@/assets/logo.svg';
+  import logo from '@/assets/banner2.jpg';
   import store from '@/store';
 
   export default {
@@ -32,7 +32,7 @@
       submit(data) {
         if (data.type === 'user') {
           setTimeout(() => {
-            this.$message.success(`登录成功 ${data.user} 欢迎使用 e-admin`);
+            this.$message.success(`登录成功 ${data.user} 欢迎使用`);
             store.user.id = Date.now().toString();
             store.user.name = data.user;
             localStorage.setItem('document_user', JSON.stringify(store.user));
