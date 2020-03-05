@@ -1,16 +1,13 @@
 {
   "name": "joker-blog",
-  "version": "0.3.11",
+  "version": "1.0.0",
   "main": "lib/index.umd.min.js",
   "style": "lib/index.css",
   "typings": "types/index.d.ts",
   "scripts": {
-    "serve": "vue-cli-service serve",
+    "dev": "vue-cli-service serve",
     "lint": "vue-cli-service lint",
-    "build": "npm run build-lib && npm run build-components",
-    "build-lib": "vue-cli-service build --target lib --dest lib --name index packages/index.js",
-    "build-components": "npx webpack --config ./build/webpack.component.js",
-    "build-docs": "vue-cli-service build"
+    "build": "vue-cli-service build"
   },
   "dependencies": {
     "address-parse": "^1.0.1",
@@ -70,9 +67,5 @@
     "> 1%",
     "last 2 versions"
   ],
-  "repository": {
-    "type": "git",
-    "url": "git@github.com:akebe/e-admin.git"
-  },
   "license": "MIT"
 }

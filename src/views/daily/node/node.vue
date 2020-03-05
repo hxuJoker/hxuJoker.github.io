@@ -14,5 +14,8 @@
 </script>
 
 <style lang="less" scoped>
+.ea-document{
+  width: 1000px !important;
+}
 
 </style>
