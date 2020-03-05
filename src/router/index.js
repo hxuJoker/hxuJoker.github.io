@@ -28,8 +28,8 @@ const Node = () =>
   import ( /* webpackChunkName: "ea-image-dialog" */ '@/views/daily/node/node.vue');
 const Daily = () =>
   import ( /* webpackChunkName: "ea-image-dialog" */ '@/views/daily/daily.vue');
-// const ImageDialog = () =>
-//   import ( /* webpackChunkName: "ea-image-dialog" */ '@/views/image-dialog/ImageDialog.vue');
+const Es = () =>
+  import ( /* webpackChunkName: "ea-image-dialog" */ '@/views/daily/es/es.vue');
 // const ImageDialog = () =>
 //   import ( /* webpackChunkName: "ea-image-dialog" */ '@/views/image-dialog/ImageDialog.vue');
 // const ImageDialog = () =>
@@ -112,6 +112,11 @@ const router = new VueRouter({
           path: '/node',
           name: 'Node',
           component: Node,
+        },
+        {
+          path: '/es',
+          name: 'Es',
+          component: Es,
         },
         {
           path: '/daily',
