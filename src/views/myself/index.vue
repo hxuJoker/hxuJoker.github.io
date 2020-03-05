@@ -4,7 +4,7 @@
       <div class="about">关于</div>
       <div class="content">
         <img :src="require('@/assets/image/myself.png')" class=""/>
-        <span><b>徐广昊</b>，一个95后小青年，17年入行。一直潜心研究web前端技术，一边工作一边积累经验，分享一些个人博客模板，以及SEO优化等心得。</span>
+        <span><b>徐广昊</b>，一个95后小青年，17年入行。一直潜心研究web前端技术，一边工作一边积累经验，分享一些个人总结和心得。</span>
       </div>
     </div>
     <div class="about-me">
