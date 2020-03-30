@@ -30,12 +30,12 @@ const Daily = () =>
   import ( /* webpackChunkName: "ea-image-dialog" */ '@/views/daily/daily.vue');
 const Es = () =>
   import ( /* webpackChunkName: "ea-image-dialog" */ '@/views/daily/es/es.vue');
-// const ImageDialog = () =>
-//   import ( /* webpackChunkName: "ea-image-dialog" */ '@/views/image-dialog/ImageDialog.vue');
-// const ImageDialog = () =>
-//   import ( /* webpackChunkName: "ea-image-dialog" */ '@/views/image-dialog/ImageDialog.vue');
-// const ImageDialog = () =>
-//   import ( /* webpackChunkName: "ea-image-dialog" */ '@/views/image-dialog/ImageDialog.vue');
+const Retina = () =>
+  import ( /* webpackChunkName: "ea-image-dialog" */ '@/views/daily/retina/retina.vue');
+const Bfc = () =>
+  import ( /* webpackChunkName: "ea-image-dialog" */ '@/views/daily/bfc/bfc.vue');
+const Ts = () =>
+  import ( /* webpackChunkName: "ea-image-dialog" */ '@/views/daily/ts/ts.vue');
 
 Vue.use(VueRouter);
 
@@ -89,15 +89,11 @@ const router = new VueRouter({
             tabs: {
               title: 'SingleView1',
               onOpen(tab) {
-                // eslint-disable-next-line no-console
-                console.log('tab-open:router', tab);
                 if (tab.route.params.id === '103') {
                   tab.title = 'lucky number';
                 }
               },
-              onClose(tab) {
-                // eslint-disable-next-line no-console
-                console.log('tab-close:router', tab);
+              onClose() {
               },
             },
           }
@@ -117,6 +113,21 @@ const router = new VueRouter({
           path: '/es',
           name: 'Es',
           component: Es,
+        },
+        {
+          path: '/retina',
+          name: 'Retina',
+          component: Retina,
+        },
+        {
+          path: '/bfc',
+          name: 'Bfc',
+          component: Bfc,
+        },
+        {
+          path: '/ts',
+          name: 'Ts',
+          component: Ts,
         },
         {
           path: '/daily',
