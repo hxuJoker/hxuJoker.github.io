@@ -2,6 +2,7 @@ import Vue from 'vue';
 import VueRouter from 'vue-router';
 
 import Router from './router/index';
+import dailyRouter from './dailyRouter';
 
 import {Error} from 'e-admin';
 
@@ -21,21 +22,6 @@ const SingleView = () =>
   import ( /* webpackChunkName: "ea-single-view" */ '@/views/view/SingleView.vue');
 const ImageDialog = () =>
   import ( /* webpackChunkName: "ea-image-dialog" */ '@/views/image-dialog/ImageDialog.vue');
-
-
-
-const Node = () =>
-  import ( /* webpackChunkName: "ea-image-dialog" */ '@/views/daily/node/node.vue');
-const Daily = () =>
-  import ( /* webpackChunkName: "ea-image-dialog" */ '@/views/daily/daily.vue');
-const Es = () =>
-  import ( /* webpackChunkName: "ea-image-dialog" */ '@/views/daily/es/es.vue');
-const Retina = () =>
-  import ( /* webpackChunkName: "ea-image-dialog" */ '@/views/daily/retina/retina.vue');
-const Bfc = () =>
-  import ( /* webpackChunkName: "ea-image-dialog" */ '@/views/daily/bfc/bfc.vue');
-const Ts = () =>
-  import ( /* webpackChunkName: "ea-image-dialog" */ '@/views/daily/ts/ts.vue');
 
 Vue.use(VueRouter);
 
@@ -104,37 +90,8 @@ const router = new VueRouter({
           name: 'ImageDialog',
           component: ImageDialog,
         },
-        {
-          path: '/node',
-          name: 'Node',
-          component: Node,
-        },
-        {
-          path: '/es',
-          name: 'Es',
-          component: Es,
-        },
-        {
-          path: '/retina',
-          name: 'Retina',
-          component: Retina,
-        },
-        {
-          path: '/bfc',
-          name: 'Bfc',
-          component: Bfc,
-        },
-        {
-          path: '/ts',
-          name: 'Ts',
-          component: Ts,
-        },
-        {
-          path: '/daily',
-          name: 'Daily',
-          component: Daily,
-        },
         ...Router,
+        ...dailyRouter,
         {
           path: '*',
           redirect: '/error/404',

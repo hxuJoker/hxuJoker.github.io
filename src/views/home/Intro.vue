@@ -4,10 +4,10 @@
       <el-col :span="7">
         <myself/>
       </el-col>
-      <el-col :span="16" :offset="1">
+      <el-col :span="16" :offset="1" class="daily-list-col">
         <div v-for="(item,index) in daliyList" :key="index" class="daily-list">
           <div class="word">
-            <h3 class="title" @click="goToDaily(item.router)">{{item.name}}</h3>
+            <h3 class="title" @click="goToDaily(item.path)">{{item.title}}</h3>
             <p class="description">{{item.description}}</p>
           </div>
           <img :src="item.image" class="image" :style="item.style"/>
@@ -38,6 +38,10 @@
   };
 </script>
 <style lang="less" scoped>
+.daily-list-col{
+  max-height: 730px;
+  overflow-y: scroll;
+}
 .daily-list{
   background: rgba(255,255,255,0.8);
   padding: 15px;

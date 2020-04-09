@@ -1,4 +1,4 @@
-### TypeScript 入门
+# TypeScript 入门
 
 #### 一、TypeScript 介绍
 

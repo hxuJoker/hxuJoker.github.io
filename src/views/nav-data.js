@@ -1,3 +1,4 @@
+import dailyList from './daily-list'
 export default [
   {
     title: '首页',
@@ -61,28 +62,7 @@ export default [
   {
     title:'文档',
     icon: 'el-icon-document',
-    children:[
-      {
-        title: 'Node 基础和实践',
-        path: '/node'
-      },
-      {
-        title: 'TypeScript 基础入门',
-        path: '/ts'
-      },
-      {
-        title: 'ES5 和 ES6 中类的区别',
-        path: '/es'
-      },
-      {
-        title: '解决移动端 Retina 屏幕 1px 边框问题',
-        path: '/retina'
-      },
-      {
-        title: 'BFC 原理解析',
-        path: '/bfc'
-      }
-    ]
+    children:dailyList
   },
   {
     title: '错误页面',
