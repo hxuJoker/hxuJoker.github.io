@@ -7,7 +7,7 @@
             <h3 class="title" @click="goToDaily(item.path)">{{item.title}}</h3>
             <p class="description">{{item.description}}</p>
           </div>
-          <img :src="item.image" class="image"/>
+          <img :src="item.image" class="image" :style="item.style"/>
         </div>
       </el-col>
     </el-row>
