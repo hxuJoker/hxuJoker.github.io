@@ -1,4 +1,4 @@
-import dailyList from './daily-list'
+// import dailyList from './daily-list'
 export default [
   {
     title: '首页',
@@ -10,11 +10,11 @@ export default [
     path: '/update',
     icon: 'el-icon-s-promotion',
   },
-  {
-    title:'文档',
-    icon: 'el-icon-document',
-    children:dailyList
-  },
+  // {
+  //   title:'文档',
+  //   icon: 'el-icon-document',
+  //   children:dailyList
+  // },
   {
     title: '错误页面',
     icon: 'el-icon-warning',
