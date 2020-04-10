@@ -11,7 +11,7 @@
       <div class="about">分类</div>
       <div class="content">
         <p @click="goDailyList">文章（{{daliyList.length}}）</p>
-        <p>相册（10）</p>
+        <p @click="goPhoto">相册（10）</p>
       </div>
     </div>
     <div class="about-me">
@@ -19,6 +19,7 @@
       <ul class="url">
         <li>
           <a href="https://hxujoker.github.io/docs" title="Joker个人博客">Joker个人博客</a>
+          <a href="https://blog.csdn.net/weixin_43858667" title="CSDN">CSDN</a>
         </li>
       </ul>
     </div>
@@ -42,6 +43,9 @@
     methods: {
       goDailyList() {
         this.$router.push('/daily')
+      },
+      goPhoto(){
+        this.$router.push('/error/403')
       }
     },
   }
@@ -82,7 +86,12 @@
   background: #f7f7f7;
   color: #555;
   font-weight: 700;
-  font-size: 15px
+  font-size: 15px;
+  li{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
 }
 .qr-content{
   background: #f7f7f7;

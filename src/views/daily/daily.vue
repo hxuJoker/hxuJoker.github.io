@@ -4,7 +4,7 @@
       <el-col :span="18" :offset="3">
         <div v-for="(item,index) in daliyList" :key="index" class="daily-list">
           <div class="word">
-            <h3 class="title" @click="goToDaily(item.router)">{{item.name}}</h3>
+            <h3 class="title" @click="goToDaily(item.path)">{{item.title}}</h3>
             <p class="description">{{item.description}}</p>
           </div>
           <img :src="item.image" class="image"/>

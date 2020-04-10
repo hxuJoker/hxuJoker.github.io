@@ -1,7 +1,6 @@
 import Vue from 'vue';
 import VueRouter from 'vue-router';
 
-import Router from './router/index';
 import dailyRouter from './dailyRouter';
 
 import {Error} from 'e-admin';
@@ -11,17 +10,7 @@ const Index = () =>
 const Intro = () =>
   import ( /* webpackChunkName: "index" */ '@/views/home/Intro.vue');
 const Update = () =>
-  import ( /* webpackChunkName: "update" */ '@/views/update/Update.vue');
-const Header = () =>
-  import ( /* webpackChunkName: "ea-header" */ '@/views/header/Header.vue');
-const View = () =>
-  import ( /* webpackChunkName: "ea-view" */ '@/views/view/View.vue');
-const MultiView = () =>
-  import ( /* webpackChunkName: "ea-multi-view" */ '@/views/view/MultiView.vue');
-const SingleView = () =>
-  import ( /* webpackChunkName: "ea-single-view" */ '@/views/view/SingleView.vue');
-const ImageDialog = () =>
-  import ( /* webpackChunkName: "ea-image-dialog" */ '@/views/image-dialog/ImageDialog.vue');
+  import ( /* webpackChunkName: "update" */ '@/views/update/Update.vue')
 
 Vue.use(VueRouter);
 
@@ -42,7 +31,7 @@ const router = new VueRouter({
           component: Error,
           props: true,
           meta: {
-            tabs: false,
+            tabs: true,
           },
         },
         {
@@ -50,47 +39,6 @@ const router = new VueRouter({
           name: 'Update',
           component: Update,
         },
-        {
-          path: '/header',
-          name: 'Header',
-          component: Header,
-        },
-        {
-          path: '/view',
-          name: 'View',
-          component: View,
-        },
-        {
-          path: '/view/multi/:id',
-          props: true,
-          name: 'MultiView',
-          component: MultiView,
-        },
-        {
-          path: '/view/single/:id',
-          props: true,
-          name: 'SingleView',
-          component: SingleView,
-          meta:{
-            tabs: {
-              title: 'SingleView1',
-              onOpen(tab) {
-                if (tab.route.params.id === '103') {
-                  tab.title = 'lucky number';
-                }
-              },
-              onClose() {
-              },
-            },
-          }
-
-        },
-        {
-          path: '/upload',
-          name: 'ImageDialog',
-          component: ImageDialog,
-        },
-        ...Router,
         ...dailyRouter,
         {
           path: '*',
