@@ -19,5 +19,5 @@ module.exports = {
     disableHostCheck: true,
   },
   outputDir: 'docs',
-  publicPath: '/',
+  publicPath: './',
 };
