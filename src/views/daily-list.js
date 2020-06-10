@@ -18,18 +18,18 @@ export default [
     description:'文章中主要讲述 ES5 和 ES6 的类、类的属性、方法、类的继承、原型链的区别。属自己一些小总结，如有不妥请告知，不喜勿喷，谢谢~',
     image: 'https://www.runoob.com/wp-content/uploads/2017/08/20130807-es6-e1420205362328.png'
   },
-  {
-    title: '解决移动端 Retina 屏幕 1px 边框问题',
-    path: '/retina',
-    description:'文章中主要讲述解决移动端关于 1px 边框的七种方法。属自己一些小总结，如有不妥请告知，不喜勿喷，谢谢~',
-    image: 'https://www.yangqq.com/d/file/news/life/2014-05-29/37b2762ee25cd73e39019c57eb6c6135.jpg'
-  },
-  {
-    title: 'BFC 原理解析',
-    path: '/bfc',
-    description:'文章中主要讲述关于css布局块级元素的一些细节问题。属自己一些小总结，如有不妥请告知，不喜勿喷，谢谢~',
-    image: 'http://www.yangqq.com/d/file/jstt/bj/2018-06-29/3f0b6da48a6fd4e626a021ff7bd0d74f.jpg'
-  },
+  // {
+  //   title: '解决移动端 Retina 屏幕 1px 边框问题',
+  //   path: '/retina',
+  //   description:'文章中主要讲述解决移动端关于 1px 边框的七种方法。属自己一些小总结，如有不妥请告知，不喜勿喷，谢谢~',
+  //   image: 'https://www.yangqq.com/d/file/news/life/2014-05-29/37b2762ee25cd73e39019c57eb6c6135.jpg'
+  // },
+  // {
+  //   title: 'BFC 原理解析',
+  //   path: '/bfc',
+  //   description:'文章中主要讲述关于css布局块级元素的一些细节问题。属自己一些小总结，如有不妥请告知，不喜勿喷，谢谢~',
+  //   image: 'http://www.yangqq.com/d/file/jstt/bj/2018-06-29/3f0b6da48a6fd4e626a021ff7bd0d74f.jpg'
+  // },
   {
     title: 'JS 数据类型涉及的面试题',
     path: '/js',
